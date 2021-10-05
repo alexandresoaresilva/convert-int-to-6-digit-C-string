@@ -27,25 +27,25 @@ void convert_long_to_char(long signed_integer, char* saveDigitsHere){
 	int i;
 	
 	
-    else if ( signed_integer > 10 && signed_integer  < 100 )
+    else if ( signed_integer >= 10 && signed_integer  < 100 )
     {
         digits[0] =  signed_integer/10;
         digits[1] =  signed_integer - digits[0]*10;
     }
-    else if ( signed_integer > 100 && signed_integer  < 1000 )
+    else if ( signed_integer >= 100 && signed_integer  < 1000 )
     {
         digits[0] =  signed_integer/100;
         digits[1] =  (signed_integer - digits[0]*100)/10;
         digits[2] =  signed_integer - (digits[0]*100 + digits[1]*10);
     }
-    else if ( signed_integer > 1000 && signed_integer  < 10000 )
+    else if ( signed_integer >= 1000 && signed_integer  < 10000 )
     {
         digits[0] =  signed_integer/1000;
         digits[1] =  (signed_integer - digits[0]*1000)/100;
         digits[2] =  (signed_integer - (digits[1]*100 + digits[0]*1000) )/10;
         digits[3] =  signed_integer - (digits[2]*10 + digits[1]*100 + digits[0]*1000);
     }
-    else if ( signed_integer > 10000 && signed_integer  < 100000 )
+    else if ( signed_integer >= 10000 && signed_integer  < 100000 )
     {
         digits[0] =  signed_integer/10000;
         digits[1] =  (signed_integer - digits[0]*10000)/1000;
@@ -53,7 +53,7 @@ void convert_long_to_char(long signed_integer, char* saveDigitsHere){
         digits[3] =  (signed_integer - (digits[2]*100 + digits[1]*1000 + digits[0]*10000) )/10;
         digits[4] =  signed_integer - (digits[3]*10 + digits[2]*100 + digits[1]*1000 + digits[0]*10000);
     }
-    else if ( signed_integer > 100000 && signed_integer  < 1000000 )
+    else if ( signed_integer >= 100000 && signed_integer  < 1000000 )
     {
         digits[0] =  signed_integer/100000;
         digits[1] =  (signed_integer - digits[0]*100000)/10000;
